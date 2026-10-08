@@ -101,7 +101,7 @@ resource "aws_key_pair" "main-key" {
 
 resource "aws_instance" "main-instance" {
   ami           = "ami-081b0a6eac00b4f53" # Ubuntu
-  instance_type = "c7i-flex.large"
+  instance_type = "m7i-flex.large"
   subnet_id     = aws_subnet.main-public-subnet.id
   security_groups = [aws_security_group.main-sg.id]
   associate_public_ip_address = true
